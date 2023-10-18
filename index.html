@@ -4,29 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myntra - Clone</title>
     <link rel="stylesheet" href="style.css">
+    <title>Myntra - Clone</title>
 </head>
 
 <body>
-    <div class="header flex">
-        <div class="icon border-red-700 border-2 m-2 mx-auto">
-            <img class="w-32" src="photos/myntra.avif" alt="">
-        </div>
-        <div class="navbar border-red-700 border-2 m-2 mx-auto">
-            <ul class="flex">
-                <li class="mx-5 my-5 cursor-pointer">MEN</li>
-                <li class="mx-5 my-5 cursor-pointer">WOMEN</li>
-                <li class="mx-5 my-5 cursor-pointer">KID</li>
-                <li class="mx-5 my-5 cursor-pointer">ACESSORIES</li>
-                <li class="mx-5 my-5 cursor-pointer">ORDERS</li>
-                <li class="mx-5 my-5 cursor-pointer">ABOUT</li>
+    <header>
+        <div class="navbar flex mx-auto ">
+            <div class="logo">
+                <img class="w-32 mt-6 ml-5" src="/photos/myntra.avif" alt="">
+            </div>
+            <ul class="flex mt-11 ml-5">
+                <li class="mx-10">MEN</li>
+                <li class="mx-10">WOMEN</li>
+                <li class="mx-10">KIDS</li>
+                <li class="mx-10">ACESSORIES</li>
+                <li class="mx-10">ABOUT US</li>
             </ul>
+            <div class="inputbar">
+                <input class="bg-slate-200 rounded-2xl mt-11 ml-60" type="text">
+            </div>
+            <div class="">
+                <div class="flex">
+                    <div class="w-10 mt-6 ml-10 ">
+                        <img class="m-10"  src="/photos/profile.svg" alt="">
+                        <span>Profile </span>
+                    </div>
+                    <div class="w-10 mt-6 mx-10">
+                        <img class="m-10"  src="/photos/watchlist.svg" alt="">
+                        <span>Watch List </span>
+                    </div>
+                    <div class="w-10 mt-6">
+                        <img class="m-10"  src="/photos/bag.svg" alt="">
+                        <span>Profile </span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="searchbar border-2 border-red-700 m-2 mx-auto">
-            <input class="rounded-2xl my-3 mx-2 border-2 border-black w-80 h-10" type="text" name="search_query" id="search_query">
-        </div>
-    </div>
+    </header>
 </body>
 
 </html>
