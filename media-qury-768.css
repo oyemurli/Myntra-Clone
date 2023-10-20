@@ -1,2 +1,21 @@
-@media only screen and (min-width: 50px) and (max-width: 768px) {
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    body {
+        /* background-color: yellow; */
+    }
+
+    .navbar-items {
+        border: 2px solid red;
+        display: none;
+    }
+
+    .item-box {
+        display: none;
+    }
+
+
+    .logo {
+        display: none;
+        margin-left: 27px;
+    }
+
 }

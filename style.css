@@ -13,16 +13,24 @@ a {
 
 .navbar-elements {
     display: grid;
-    grid-template-columns: 1fr 10fr 7fr 3fr;
+    grid-template-columns: 1fr 11fr 7fr 3fr;
     box-shadow: 0px 0px 1px rgb(158, 155, 155);
     
 }
 
+.logo-image {
+    /* border: 2px solid red; */
+    width: 70px;
+}
 .logo {
     /* border: 2px solid black; */
     width: 120px;
     margin-top: 16px;
     margin-left: 47px;
+}
+.bar{
+    margin: 10px 10px;
+    padding: 10px;
 }
 
 .navbar {
@@ -32,6 +40,7 @@ a {
 .nav-box {
     display: flex;
     margin-top: 40px;
+    margin-left: 20px;
 }
 
 .navbar-items {
@@ -56,6 +65,7 @@ a {
     margin-right: auto;
     width: 400px;
     height: 30px;
+
 }
 .input:hover{
     /* background-color: rgb(231, 231, 231); */
@@ -115,4 +125,7 @@ a {
     /* border: 2px solid red; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+.hidden-profile{
+    display: none;
 }
