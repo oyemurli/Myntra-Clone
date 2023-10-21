@@ -1,131 +1,46 @@
 * {
     margin: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    list-style: none;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 0px;
+    font-size: 0.8vw;
 }
 
 a {
     color: black;
     text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
-.navbar-elements {
-    display: grid;
-    grid-template-columns: 1fr 11fr 7fr 3fr;
-    box-shadow: 0px 0px 1px rgb(158, 155, 155);
-    
-}
-
-.logo-image {
-    /* border: 2px solid red; */
-    width: 70px;
-}
-.logo {
-    /* border: 2px solid black; */
-    width: 120px;
-    margin-top: 16px;
-    margin-left: 47px;
-}
-.bar{
-    margin: 10px 10px;
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
 }
-
-.navbar {
-    /* border: 2px solid red; */
-}
-
-.nav-box {
+.left {
     display: flex;
-    margin-top: 40px;
-    margin-left: 20px;
+    border: 2px solid red;
 }
-
-.navbar-items {
-    margin-left: 40px;
-    
+.left img{
+    width: 10vw;
 }
-
-.input-bar {
-    /* border: 2px solid red; */
-
+.left ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2vw;
 }
-
-.input {
-    background-color: rgb(242, 242, 242);
-    border: 1px solid transparent;
-    border-radius: 3px;
-    color: rgb(109, 109, 109);
-    padding-left: 15px;
-    margin-top: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: 30px;
-
+.left .items{
+    /* font-size: 1vw; */
 }
-.input:hover{
-    /* background-color: rgb(231, 231, 231); */
-    background-color: white;
-    border: 1px solid rgb(126, 126, 126);
+.right{
+    border: 2px solid red;
+    display: flex;
 }
-
-.three-elements {
-    /* border: 2px solid red; */
-}
-
-.item-box {
-    /* border: 2px solid black; */
-    margin-top: 30px;
-    margin-right: 50px;
-}
-
-.box {
-    /* border: 2px solid red; */
-    display: grid;
-    grid-template-columns: 10fr 10fr 10fr;
-    text-align: center;
-}
-
-.first-item{
-    /* border: 2px solid black; */
-    display: inline-block;
-    margin-left: 30px;
-    
-}
-.second-item{
-    /* border: 2px solid black; */
-    display: inline-block;
-    margin-left: 30px;
-}
-.third-item{
-    /* border: 2px solid black; */
-    display: inline-block;
-    margin-left: 30px;
-}
-.profile {
-    width: 16px;
-    /* border: 2px solid red; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.watchlist {
-    width: 18px;
-    /* border: 2px solid red; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.bag {
-    width: 17px;
-    /* border: 2px solid red; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-.hidden-profile{
-    display: none;
+.right input{
+    width: 25vw;
+    background-color: #eaeaea;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 0.4vw 1vw;
 }
