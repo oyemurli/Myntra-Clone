@@ -5,33 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myntra-clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="320px.css">
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <header>
         <nav>
             <div class="left">
-                <h2><img src="/photos/myntra-logo.png" alt=""></h2>
-                <ul> 
-                    <li class="nav-items" ><a href="">MEN</a></li>
-                    <li class="nav-items" ><a href="">WOMEN</a></li>
-                    <li class="nav-items" ><a href="">KID</a></li>
-                    <li class="nav-items" ><a href="">HOME & LIVING</a></li>
-                    <li class="nav-items" ><a href="">GROCCERY</a></li>
-                    <li class="nav-items" ><a href="">ABOUT</a></li>
+                <h2><img class="bar" src="/photos/bar.svg" alt=""></h2>
+                <div class="name"><a href=""></a>Myntra</div>
+                <h2><img class="logo" src="/photos/myntra-logo.png" alt=""></h2>
+                <ul>
+                    <li class="nav-items"><a href="">MEN</a></li>
+                    <li class="nav-items"><a href="">WOMEN</a></li>
+                    <li class="nav-items"><a href="">KID</a></li>
+                    <li class="nav-items"><a href="">HOME & LIVING</a></li>
+                    <li class="nav-items"><a href="">GROCCERY</a></li>
+                    <li class="nav-items"><a href="">ABOUT</a></li>
                 </ul>
             </div>
             <div class="right">
                 <input type="text" placeholder="Search for Products, Brands and more...">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <div class="right-items element">
+                        <a href=""><img class="img right-item1" src="/photos/profile.svg" alt="">
+                            <div>Profile</div>
+                        </a>
+                    </div>
+                    <div class="right-items element">
+                        <a href=""><img class="img  right-item2" src="/photos/watchlist.svg" alt="">
+                            <div>Wishlist</div>
+                        </a>
+                    </div>
+                    <div class="right-items">
+                        <a href=""><img class="img  right-item3" src="/photos/bag.svg" alt="">
+                            <div>Bag</div>
+                        </a>
+                    </div>
+                    <div class="phone">
+                        <a href=""><img class="right-item4 phone-items " src="/photos/search.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="phone">
+                        <a href=""><img class="right-item5 phone-items " src="/photos/watchlist.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="phone">
+                        <a href=""><img class="right-item6 phone-items " src="/photos/bag.svg" alt="">
+                        </a>
+                    </div>
                 </ul>
             </div>
         </nav>
     </header>
+    <!-- Slider -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- Cotegories -->
+    <div class="sale-tag">
+        <a href="">
+            <h1 class="sale-tag">Special Sale!</h1>
+        </a>
+    </div>
+    <div class="timer-container">
+        <span class="sale-end" id="timer-text">Sale ends within 2 days</span>
+        <span class="timer" id="timer">00:00:00</span>
+    </div>
+
+    <script>
+        // Set the end date for the sale (in UTC format)
+        const saleEndDate = new Date('2023-10-24T00:00:00Z').getTime();
+
+        function updateTimer() {
+            const currentTime = new Date().getTime();
+            const timeRemaining = saleEndDate - currentTime;
+
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                document.getElementById('timer-text').textContent = `Sale ends within ${days} days`;
+                document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
+            } else {
+                document.getElementById('timer-text').textContent = 'Sale has ended';
+                document.getElementById('timer').textContent = '00:00:00';
+            }
+        }
+
+        // Call the updateTimer function every second
+        setInterval(updateTimer, 1000);
+
+        // Initial call to set the timer text
+        updateTimer();
+    </script>
 </body>
 
 </html>

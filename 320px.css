@@ -1,0 +1,114 @@
+@media (max-width:800px) {
+    body {
+        /* background-color: red; */
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-size: 0.8vw;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    nav {
+        padding-left: 4vw;
+        padding-right: 1vw;
+        padding-top: 3vw;
+        padding-bottom: 4vw;
+        box-shadow: 1px 1px 1px rgb(208, 208, 208);
+    }
+
+    .left .name {
+        display: flex;
+        align-items: center;
+        font-size: 5vw;
+        font-weight: bold;
+        margin-left: 4vw;
+    }
+
+    .left .bar {
+        display: block;
+        width: 7vw;
+    }
+
+    .left .logo {
+        display: none;
+    }
+
+    .right .right-items {
+        display: none;
+    }
+
+    .left .nav-items {
+        display: none;
+    }
+
+    .right input {
+        display: none;
+    }
+
+    .phone {
+        display: block;
+        /* width: 10vw; */
+        /* border: 2px solid white; */
+    }
+
+    /* 
+    .phone-items {
+        width: 7vw;
+    } */
+
+    .right .right-item4 {
+        width: 6vw;
+        margin-right: 5vw;
+        padding-top: 0.4vw;
+    }
+
+    .right .right-item5 {
+        width: 6vw;
+        margin-right: 5vw;
+        padding-top: 0.4vw;
+    }
+
+    .right .right-item6 {
+        width: 5vw;
+        padding-top: 0.4vw;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 50%;
+        /* border: 2px solid; */
+        /* margin-top: 1vw; */
+    }
+
+    .swiper-slide {}
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sale-tag {
+        font-size: 4vw;
+
+    }
+
+    .sale-end {
+        font-size: 4vw;
+
+    }
+
+    .timer {
+        font-size: 4vw;
+
+    }
+}
