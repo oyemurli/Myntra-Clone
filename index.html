@@ -62,17 +62,17 @@
         </nav>
     </header>
     <!-- Slider -->
-    <div class="swiper mySwiper">
+    <div class="swiper myslider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/Slider-pic.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/02.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/03.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -80,7 +80,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".myslider", {
             spaceBetween: 30,
             centeredSlides: true,
             autoplay: {
@@ -97,15 +97,32 @@
             },
         });
     </script>
-    <!-- Cotegories -->
-    <div class="sale-tag">
-        <a href="">
-            <h1 class="sale-tag">Special Sale!</h1>
-        </a>
+    <!-- Cotegory container -->
+    <div class="cotegory">
+        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/02.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/03.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/04.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/05.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/06.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
+        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
     </div>
-    <div class="timer-container">
-        <span class="sale-end" id="timer-text">Sale ends within 2 days</span>
-        <span class="timer" id="timer">00:00:00</span>
+    <div class="sale-alert">
+        <div class="sale-tag">
+            <a href="">
+                <h1 class="sale-tag">Special Sale!</h1>
+            </a>
+        </div>
+        <div class="timer-container">
+            <span class="sale-end" id="timer-text">Sale ends within 2 days</span>
+            <span class="timer" id="timer">00:00:00</span>
+        </div>
+        <div class="button">
+            <button>Grab now</button>
+        </div>
     </div>
 
     <script>
