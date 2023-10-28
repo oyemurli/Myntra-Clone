@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!-- Navigation bar -->
+    <!-- Navigation bar1 -->
     <header>
         <nav>
             <div class="left">
@@ -66,7 +66,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
             <div class="swiper-slide"><img src="/photos/slider-images/02.png" alt=""></div>
-            <div class="swiper-slide"><img src="/photos/slider-images/03.png" alt=""></div>
+            <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
             <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
             <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
             <div class="swiper-slide"><img src="/photos/slider-images/01.png" alt=""></div>
@@ -97,62 +97,130 @@
             },
         });
     </script>
-    <!-- Cotegory container -->
-    <div class="cotegory">
-        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/02.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/03.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/04.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/05.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/06.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
-        <div class="Photos items"><img src="/photos/image-bo1/01.png" alt=""></div>
-    </div>
     <div class="sale-alert">
-        <div class="sale-tag">
-            <a href="">
-                <h1 class="sale-tag">Special Sale!</h1>
-            </a>
-        </div>
         <div class="timer-container">
             <span class="sale-end" id="timer-text">Sale ends within 2 days</span>
-            <span class="timer" id="timer">00:00:00</span>
+            <span class="timer" id="timer">00h:00m:00s</span>
         </div>
-        <div class="button">
-            <button>Grab now</button>
-        </div>
-    </div>
+        <script>
+            // Set the end date for the sale (in UTC format)
+            const saleEndDate = new Date('2023-10-24T00:00:00Z').getTime();
 
-    <script>
-        // Set the end date for the sale (in UTC format)
-        const saleEndDate = new Date('2023-10-24T00:00:00Z').getTime();
+            function updateTimer() {
+                const currentTime = new Date().getTime();
+                const timeRemaining = saleEndDate - currentTime;
 
-        function updateTimer() {
-            const currentTime = new Date().getTime();
-            const timeRemaining = saleEndDate - currentTime;
+                if (timeRemaining > 0) {
+                    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-            if (timeRemaining > 0) {
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                    document.getElementById('timer-text').textContent = `Sale ends within ${days} days`;
+                    document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
+                } else {
+                    document.getElementById('timer-text').textContent = 'Sale has ended';
+                    document.getElementById('timer').textContent = '00:00:00';
 
-                document.getElementById('timer-text').textContent = `Sale ends within ${days} days`;
-                document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
-            } else {
-                document.getElementById('timer-text').textContent = 'Sale has ended';
-                document.getElementById('timer').textContent = '00:00:00';
+                }
             }
-        }
 
-        // Call the updateTimer function every second
-        setInterval(updateTimer, 1000);
+            // Call the updateTimer function every second
+            setInterval(updateTimer, 1000);
 
-        // Initial call to set the timer text
-        updateTimer();
-    </script>
+            // Initial call to set the timer text
+            updateTimer();
+        </script>
+        <!-- Offer tag -->
+        <div class="offer-tag">
+            <div class="item-1"><a href=""><img class="flat-off" src="/photos/images-box1/flat-off.png" alt=""></a>
+            </div>
+        </div>
+        <!-- Brand & Models offer -->
+        <div class="crazy-offers">
+            <div class="offer-tag-image">
+                <img src="/photos/crazy-offers.png" alt="">
+            </div>
+        </div>
+        <!-- Brand & Models  -->
+        <div class="brand-models">
+            <div class="Photos items"><img src="/photos/images-box2/01.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/02.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/03.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/04.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/05.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/06.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/01.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/01.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/01.png" alt=""></div>
+            <div class="Photos items"><img src="/photos/images-box2/01.png" alt=""></div>
+        </div>
+                        
+        <div class="app-banner">
+            <div class="image">
+                <img src="/photos/app.png" alt="">
+            </div>
+        </div>
+        <div class="cotegory">
+            <div class="special">
+                <div class="heading-image"><img src="/photos/cotegory-speciala.png" alt=""></div>
+            </div>
+            <div class="row1">
+                <div class="allimages1"><img src="/photos/images-box3/01.png" alt=""></div>
+                <div class="allimages1"><img src="/photos/images-box3/02.png" alt=""></div>
+                <div class="allimages1"><img src="/photos/images-box3/03.png" alt=""></div>
+                <div class="allimages1"><img src="/photos/images-box3/04.png" alt=""></div>
+                <div class="allimages1"><img src="/photos/images-box3/05.png" alt=""></div>
+            </div>
+            <div class="row2">
+                <div class="allimages2"><img src="/photos/images-box3/06.png" alt=""></div>
+                <div class="allimages2"><img src="/photos/images-box3/07.png" alt=""></div>
+                <div class="allimages2"><img src="/photos/images-box3/08.png" alt=""></div>
+                <div class="allimages2"><img src="/photos/images-box3/09.png" alt=""></div>
+                <div class="allimages2"><img src="/photos/images-box3/10.png" alt=""></div>
+            </div>
+            <div class="row3">
+                <div class="allimages3"><img src="/photos/images-box3/11.png" alt=""></div>
+                <div class="allimages3"><img src="/photos/images-box3/12.png" alt=""></div>
+                <div class="allimages3"><img src="/photos/images-box3/13.png" alt=""></div>
+                <div class="allimages3"><img src="/photos/images-box3/14.png" alt=""></div>
+                <div class="allimages3"><img src="/photos/images-box3/15.png" alt=""></div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-box-1">
+                    <h1 class="footer-headings">About</h1>
+                    <ul>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                    </ul>
+                </div>
+                <div class="footer-box-2">
+                    <h1 class="footer-headings">Privacy & policy</h1>
+                    <ul>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena </li>
+                    </ul>
+                </div>
+                <div class="footer-box-3">
+                    <h1 class="footer-headings"> Important links</h1>
+                    <ul>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena</li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena</li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena</li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena</li>
+                        <li class="about-links">Abhi links aye nhi hai aane ke baad dekh lena</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 </body>
 
 </html>

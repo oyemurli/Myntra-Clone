@@ -83,7 +83,7 @@
 
     .swiper {
         width: 100%;
-        height: 50%;
+        height: 40%;
         /* border: 2px solid; */
         /* margin-top: 1vw; */
     }
@@ -91,22 +91,116 @@
     .swiper-slide img {
         display: block;
         width: 100%;
-        height: 100%;
+        height: 200px;
         object-fit: cover;
     }
 
-    .sale-tag {
-        font-size: 4vw;
+    .offer-tag img {
+        /* border: 2px solid red; */
+        width: 100vw;
 
     }
 
     .sale-end {
-        font-size: 4vw;
+        font-size: 3.5vw;
+        /* padding: 3px; */
+    }
 
+    .timer-container {
+        padding: 0vw;
+        margin: 0px 0px;
+        margin-top: 9px;
     }
 
     .timer {
-        font-size: 4vw;
+        font-size: 3vw;
+        padding: 2vw 2vw;
+    }
 
+    .offer-tag .flat-off {
+        width: 97vw;
+        /* height: 10vh; */
+    }
+
+    .offer-tag-image img {
+        width: 60vw;
+        /* margin: 0px; */
+        /* padding: 0px; */
+    }
+
+    .items {
+        padding: 5px;
+        padding-top: 11px;
+    }
+
+
+    .items img {
+        width: 50vw;
+        padding: 0px;
+    }
+
+    .app-banner {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .app-banner img {
+        width: 97vw;
+    }
+
+    .special img {
+        width: 60vw;
+        margin: 1.6vw;
+    }
+
+    .row1 {}
+
+    .allimages1 img {
+        margin: 0vw 1.5vw;
+        width: 17vw;
+    }
+
+    .allimages2 img {
+        margin: 0vw 1.5vw;
+        width: 17vw;
+    }
+
+    .allimages3 img {
+        margin: 0vw 1.5vw;
+        width: 17vw;
+    }
+
+    .footer-container {
+        display: block;
+        background-color: black;
+        color: white;
+        padding: 4vw 1vw;
+        margin-top: 7vw;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-headings {
+        text-align: center;
+        font-size: 4vw;
+        margin: 4vw 0vw;
+    }
+
+    .footer-headings {
+        text-align: center;
+        font-size: 4vw;
+        margin: 4vw 0vw;
+    }
+
+    .footer-headings {
+        text-align: center;
+        font-size: 4vw;
+        margin: 4vw 0vw;
+    }
+
+    .about-links {
+        list-style: none;
+        font-size: 3vw;
     }
 }
